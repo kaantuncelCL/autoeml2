@@ -1,6 +1,8 @@
 import os
 import re
 import mimetypes
+import zipfile
+from datetime import datetime
 from email.message import EmailMessage
 import pandas as pd
 import json
@@ -185,7 +187,9 @@ def create_email_message(row, template_text, variables, attachments_dir, attachm
     msg['From'] = row.get('From') or 'sender@example.com'
     msg['Subject'] = row.get('Subject') or 'No Subject'  # Clean subject, no [DRAFT] prefix
     
-    # Add some email headers for better compatibility
+    # Add headers to mark as editable draft
+    # X-Unsent: 1 tells email clients (Outlook, Thunderbird) to open as draft
+    msg['X-Unsent'] = '1'
     msg['X-Draft-Info'] = 'Generated email - Review before sending'
 
     # First, fill in the main template placeholders
@@ -505,12 +509,66 @@ def sanitize_filename(filename):
     return sanitized if sanitized else "email"
 
 
-def main(template_path, excel_path, attachments_dir=None, output_dir="generated_emails", 
+def create_zip_bundle(output_dir, zip_filename=None):
+    """
+    Create a ZIP file containing all generated email files (.eml and .msg).
+
+    Args:
+        output_dir: Directory containing the generated email files
+        zip_filename: Optional custom filename for the ZIP (without extension)
+
+    Returns:
+        str: Path to the created ZIP file, or None if no files found
+    """
+    if not os.path.exists(output_dir):
+        print(f"  Output directory not found: {output_dir}")
+        return None
+
+    # Find all email files
+    email_files = []
+    for filename in os.listdir(output_dir):
+        if filename.endswith(('.eml', '.msg')):
+            email_files.append(filename)
+
+    if not email_files:
+        print("  No email files found to bundle")
+        return None
+
+    # Generate ZIP filename with timestamp
+    if zip_filename is None:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        zip_filename = f"email_drafts_{timestamp}"
+
+    zip_path = os.path.join(output_dir, f"{zip_filename}.zip")
+
+    print(f"  Creating ZIP bundle: {zip_filename}.zip")
+
+    try:
+        with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
+            for filename in email_files:
+                file_path = os.path.join(output_dir, filename)
+                # Add file to ZIP with just the filename (no directory path)
+                zf.write(file_path, filename)
+                print(f"    Added: {filename}")
+
+        # Get ZIP file size
+        zip_size_mb = os.path.getsize(zip_path) / (1024 * 1024)
+        print(f"  ZIP bundle created: {zip_path} ({zip_size_mb:.2f} MB)")
+        print(f"  Contains {len(email_files)} email file(s)")
+
+        return zip_path
+
+    except Exception as e:
+        print(f"  Error creating ZIP bundle: {e}")
+        return None
+
+
+def main(template_path, excel_path, attachments_dir=None, output_dir="generated_emails",
          conditionals_path="conditional_lines.json", use_outlook=True, create_eml_backup=True, is_html_template=False,
-         attachment_mode="global", per_recipient_base=None, identifier_column=None):
+         attachment_mode="global", per_recipient_base=None, identifier_column=None, create_zip=True):
     """
     Main function to generate emails from template and Excel data.
-    
+
     Args:
         template_path: Path to email template file
         excel_path: Path to Excel file with recipient data
@@ -523,9 +581,10 @@ def main(template_path, excel_path, attachments_dir=None, output_dir="generated_
         attachment_mode: "global" or "per_recipient"
         per_recipient_base: Base folder for per-recipient attachments
         identifier_column: Column to use for per-recipient folder names
-    
+        create_zip: Whether to create a ZIP bundle of all generated emails
+
     Returns:
-        dict: Result dictionary with success status, counts, and any warnings/errors
+        dict: Result dictionary with success status, counts, zip_path, and any warnings/errors
     """
     
     # Load template
@@ -654,13 +713,22 @@ def main(template_path, excel_path, attachments_dir=None, output_dir="generated_
     print(f"✅ Successful: {success_count}")
     print(f"❌ Failed: {error_count}")
     print(f"📧 Total processed: {len(df)}")
-    
+
     if use_outlook and success_count > 0:
         print(f"📧 Created {success_count} editable .msg files in: {output_dir}")
-    
+
     if create_eml_backup and success_count > 0:
-        print(f"📁 Backup .eml files saved to: {output_dir}")
-    
+        print(f"📁 Draft .eml files saved to: {output_dir}")
+        print(f"   (Files include X-Unsent header for draft mode in Classic Outlook)")
+
+    # Create ZIP bundle if requested
+    zip_path = None
+    if create_zip and success_count > 0:
+        print(f"\n📦 Creating ZIP bundle...")
+        zip_path = create_zip_bundle(output_dir)
+        if zip_path:
+            print(f"✅ ZIP bundle ready for download")
+
     # Return detailed result dictionary
     return {
         'success': success_count > 0,
@@ -669,7 +737,8 @@ def main(template_path, excel_path, attachments_dir=None, output_dir="generated_
         'total_count': len(df),
         'msg_files_created': use_outlook and success_count > 0,
         'eml_files_created': create_eml_backup and success_count > 0,
-        'output_dir': output_dir
+        'output_dir': output_dir,
+        'zip_path': zip_path
     }
 
 

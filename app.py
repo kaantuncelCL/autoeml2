@@ -1218,9 +1218,15 @@ def step_6_preview_generate():
         )
         
         create_eml_backup = st.checkbox(
-            "Create .eml Backup Files", 
-            value=False,
-            help="Create .eml files as backup (readable but not editable)"
+            "Create .eml Draft Files",
+            value=True,
+            help="Create .eml files with X-Unsent header (opens as editable draft in Classic Outlook and Thunderbird)"
+        )
+
+        create_zip = st.checkbox(
+            "Create ZIP bundle for download",
+            value=True,
+            help="Bundle all generated emails into a ZIP file for easy download"
         )
     
     with col2:
@@ -1289,7 +1295,8 @@ def step_6_preview_generate():
                 is_html_template=(st.session_state.template_mode == "rich"),
                 attachment_mode=st.session_state.attachment_mode,
                 per_recipient_base=per_recipient_base,
-                identifier_column=identifier_column
+                identifier_column=identifier_column,
+                create_zip=create_zip
             )
             
             progress_bar.progress(1.0)
@@ -1300,15 +1307,52 @@ def step_6_preview_generate():
                 if isinstance(result, dict):
                     if result['success']:
                         st.success(f"Successfully generated emails for {result['success_count']} out of {result['total_count']} recipients")
-                        
+
                         if result['error_count'] > 0:
                             st.warning(f"⚠️ {result['error_count']} emails failed to generate. Check console for details.")
-                        
-                        if result.get('outlook_drafts_created'):
-                            st.info("📧 Outlook drafts have been created in your Drafts folder")
-                        
+
+                        if result.get('msg_files_created'):
+                            st.info("📧 Created .msg files (editable in all Outlook versions)")
+
                         if result.get('eml_files_created'):
-                            st.info(f"📄 Backup .eml files saved to: {result.get('output_dir', st.session_state.output_dir)}")
+                            st.info("📄 Created .eml draft files with X-Unsent header")
+
+                        # ZIP download section
+                        if result.get('zip_path') and os.path.exists(result['zip_path']):
+                            st.divider()
+                            st.subheader("Download Generated Emails")
+
+                            # Read ZIP file for download
+                            with open(result['zip_path'], 'rb') as f:
+                                zip_data = f.read()
+
+                            zip_size_mb = len(zip_data) / (1024 * 1024)
+                            st.download_button(
+                                label=f"Download ZIP Bundle ({zip_size_mb:.2f} MB)",
+                                data=zip_data,
+                                file_name=os.path.basename(result['zip_path']),
+                                mime="application/zip",
+                                type="primary"
+                            )
+
+                            # Compatibility info
+                            with st.expander("How to use downloaded emails"):
+                                st.markdown("""
+**For Classic Outlook (Windows):**
+1. Extract the ZIP file
+2. Double-click any .eml file - it will open as an editable draft
+3. Review, edit if needed, then click Send
+
+**For New Outlook (Windows 11) / Outlook Web:**
+- .eml files may have limited functionality due to known Microsoft bugs
+- Workaround: Drag .eml files into your Drafts folder, then open from there
+
+**For Thunderbird:**
+- .eml files with X-Unsent header open directly in compose mode
+
+**Note:** .msg files (if generated) work in all Outlook versions but require
+Windows with Outlook installed to create them.
+                                """)
                     else:
                         st.error(f"Failed to generate emails. {result.get('error_count', 0)} errors occurred.")
                 else:
@@ -1317,12 +1361,12 @@ def step_6_preview_generate():
                         st.success(f"Successfully generated emails for {len(st.session_state.excel_data)} recipients")
                     else:
                         st.error("Failed to generate emails")
-                    
+
                     if use_outlook and outlook_available:
                         st.success(f"📧 Created {len(st.session_state.excel_data)} editable .msg files in: {st.session_state.output_dir}")
-                    
+
                     if create_eml_backup:
-                        st.info(f"📄 Backup .eml files saved to: {st.session_state.output_dir}")
+                        st.info(f"📄 Draft .eml files saved to: {st.session_state.output_dir}")
             
             # Cleanup temp files
             if template_path.exists():
