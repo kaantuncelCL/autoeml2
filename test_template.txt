@@ -1,0 +1,10 @@
+Dear [FirstName] [LastName],
+
+I hope this email finds you well. I'm reaching out from [Company] regarding: [Subject].
+
+We have prepared some important documents for your review. Please find them attached to this email.
+
+[Conditional:PremiumMember]
+
+Best regards,
+Your Sales Team

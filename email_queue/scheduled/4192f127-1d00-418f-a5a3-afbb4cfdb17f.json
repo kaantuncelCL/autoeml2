@@ -1,0 +1,21 @@
+{
+  "id": "4192f127-1d00-418f-a5a3-afbb4cfdb17f",
+  "recipient": "bob@example.com",
+  "cc": "",
+  "bcc": "",
+  "subject": "Test Email 2",
+  "body": "This is a test email for Bob.",
+  "body_html": "",
+  "attachments": [],
+  "scheduled_time": "2025-09-12T19:13:24.586387",
+  "priority": 1,
+  "tags": [
+    "test"
+  ],
+  "metadata": {},
+  "status": "scheduled",
+  "created_at": "2025-09-12T17:13:24.536691",
+  "updated_at": "2025-09-12T17:13:24.587188",
+  "attempts": 0,
+  "last_error": null
+}

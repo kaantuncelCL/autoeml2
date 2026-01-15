@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-09-12T17:24:15.132358",
+  "template_text": "Test template with [Name]",
+  "template_mode": "plain",
+  "template_html": "",
+  "template_variables": [
+    "Name"
+  ],
+  "conditional_lines": {},
+  "attachment_mode": "global",
+  "current_step": 3
+}

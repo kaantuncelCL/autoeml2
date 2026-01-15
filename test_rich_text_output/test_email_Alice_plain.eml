@@ -1,0 +1,49 @@
+To: alice@test.com
+From: sender@example.com
+Subject: Welcome to TechCorp
+X-Draft-Info: Generated email - Review before sending
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============2858078814130461570=="
+
+--===============2858078814130461570==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+Welcome Alice!
+
+We're excited to have you join TechCorp as our new Developer.
+
+Here are your onboarding details:
+- Start Date: Jan 15
+- Department: Engineering
+- Manager: John Smith
+
+Premium Package: You get exclusive benefits!
+
+We look forward to working with you!
+
+Best regards,
+The TechCorp Team
+        
+
+--===============2858078814130461570==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html>
+<head>
+<meta charset=3D"UTF-8">
+</head>
+<body style=3D"font-family: Arial, sans-serif; font-size: 11pt;">
+<br>Welcome Alice!<br><br>We're excited to have you join TechCorp as our new =
+Developer.<br><br>Here are your onboarding details:<br>- Start Date: Jan 15<b=
+r>- Department: Engineering<br>- Manager: John Smith<br><br>Premium Package: =
+You get exclusive benefits!<br><br>We look forward to working with you!<br><b=
+r>Best regards,<br>The TechCorp Team<br>       =20
+</body>
+</html>
+
+--===============2858078814130461570==--

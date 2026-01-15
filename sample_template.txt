@@ -1,0 +1,16 @@
+Dear [FirstName],
+
+I hope this message finds you well. I'm reaching out from our team regarding an exciting opportunity with [Company].
+
+[Conditional:SpecialOffer]
+
+[Conditional:MeetingReminder]
+
+[Conditional:BrochureInfo]
+
+We believe this could be a valuable partnership for both our organizations.
+
+Please let me know if you'd like to schedule a call to discuss this further.
+
+Best regards,
+[SenderName]

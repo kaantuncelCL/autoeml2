@@ -1,0 +1,8 @@
+{
+  "name": "Investment Opportunity",
+  "description": "Professional investment proposal template",
+  "created_date": "2025-01-16",
+  "template_text": "Subject: Investment Opportunity - [CompanyName]\n\nDear [FirstName] [LastName],\n\nI hope this email finds you well. I am reaching out to present an exciting investment opportunity in [CompanyName], a [Industry] company that is revolutionizing [MarketSegment].\n\n**Key Highlights:**\n- Market Size: [MarketSize]\n- Current Valuation: [Valuation]\n- Revenue Growth: [RevenueGrowth]% year-over-year\n- Minimum Investment: [MinInvestment]\n\n[Conditional:AccreditedInvestor]\n\nOur team has achieved significant milestones including:\n• [Milestone1]\n• [Milestone2]\n• [Milestone3]\n\n*Why Now?*\nThe timing is optimal because [TimingReason]. We are confident that [CompanyName] will deliver exceptional returns to our investors.\n\nI would love to schedule a call to discuss this opportunity in more detail. Are you available for a brief conversation next week?\n\nBest regards,\n[SenderName]\n[SenderTitle]\n[CompanyName]\n[Phone] | [Email]",
+  "variables": ["CompanyName", "FirstName", "LastName", "Industry", "MarketSegment", "MarketSize", "Valuation", "RevenueGrowth", "MinInvestment", "Milestone1", "Milestone2", "Milestone3", "TimingReason", "SenderName", "SenderTitle", "Phone", "Email"],
+  "conditional_keys": ["AccreditedInvestor"]
+}

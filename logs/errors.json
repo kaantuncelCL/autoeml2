@@ -1,0 +1,146 @@
+[
+  {
+    "timestamp": "2025-09-12T17:24:15.106077",
+    "severity": "ERROR",
+    "context": "Test Context",
+    "error_type": "ValueError",
+    "error_message": "Test error for logging",
+    "user_message": "This is a test error message",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2025-09-12T17:24:15.932612",
+    "severity": "ERROR",
+    "context": "Test Context 1",
+    "error_type": "ValueError",
+    "error_message": "Test error 1",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2025-09-12T17:24:15.933280",
+    "severity": "ERROR",
+    "context": "Test Context 2",
+    "error_type": "ValueError",
+    "error_message": "Test error 2",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2025-09-12T17:24:15.935934",
+    "severity": "WARNING",
+    "context": "Test Context 3",
+    "error_type": "ValueError",
+    "error_message": "Test error 3",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2025-09-12T17:24:15.937601",
+    "severity": "ERROR",
+    "context": "Test Operation",
+    "error_type": "ValueError",
+    "error_message": "Intentional test error",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2025-10-08T14:58:26.066020",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 1 opening, 0 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2025-10-08T14:58:27.053276",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 1 opening, 0 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2025-10-08T14:58:27.522712",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 1 opening, 0 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2025-10-08T14:58:27.821503",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 1 opening, 0 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  }
+]

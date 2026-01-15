@@ -1,0 +1,65 @@
+To: alice@test.com
+From: sender@example.com
+Subject: Welcome to TechCorp
+X-Draft-Info: Generated email - Review before sending
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============5514583153005023454=="
+
+--===============5514583153005023454==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+    Welcome Alice!
+    We're excited to have you join TechCorp as our new Developer.
+   =20
+    Here are your onboarding details:
+   =20
+        Start Date: Jan 15
+        Department: Engineering
+        Manager: John Smith
+   =20
+   =20
+    Please visit our company portal to complete your paperwork.
+   =20
+    Premium Package: As a premium member, you get access to exclusive benefit=
+s including gym membership and enhanced healthcare!
+   =20
+    We look forward to working with you!
+   =20
+    Best regards,
+    The TechCorp Team
+   =20
+
+--===============5514583153005023454==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+
+    <h2>Welcome Alice!</h2>
+    <p>We're excited to have you join <b>TechCorp</b> as our new <i>Developer=
+</i>.</p>
+   =20
+    <p style=3D"color: blue;">Here are your <u>onboarding details</u>:</p>
+    <ul>
+        <li>Start Date: <strong>Jan 15</strong></li>
+        <li>Department: <span style=3D"color: green;">Engineering</span></li>
+        <li>Manager: John Smith</li>
+    </ul>
+   =20
+    <p>Please visit our <a href=3D"https://example.com">company portal</a> to=
+ complete your paperwork.</p>
+   =20
+    <p style=3D"background-color: gold; padding: 10px;"><b>Premium Package:</=
+b> As a premium member, you get access to exclusive benefits including gym me=
+mbership and enhanced healthcare!</p>
+   =20
+    <p style=3D"font-size: 18px;">We look forward to working with you!</p>
+    <br>
+    <p><em>Best regards,<br>
+    The TechCorp Team</em></p>
+   =20
+
+--===============5514583153005023454==--

@@ -1,0 +1,4 @@
+id,recipient,subject,scheduled_time,status,created_at,attempts
+6e960237-22d9-4478-98c1-3b4834431cc7,charlie@example.com,Test Email 3,2025-09-12T19:43:24.586387,scheduled,2025-09-12T17:13:24.560834,0
+4192f127-1d00-418f-a5a3-afbb4cfdb17f,bob@example.com,Test Email 2,2025-09-12T19:13:24.586387,scheduled,2025-09-12T17:13:24.536691,0
+4c4d6c48-6b12-46ea-88f6-fcfb65139eec,alice@example.com,Test Email 1,,draft_created,2025-09-12T17:13:24.527734,0

@@ -1,0 +1,8 @@
+{
+  "name": "Meeting Request",
+  "description": "Professional meeting request template",
+  "created_date": "2025-01-16",
+  "template_text": "Subject: Meeting Request - [MeetingTopic]\n\nDear [FirstName] [LastName],\n\nI hope this message finds you well. I am writing to request a meeting to discuss [MeetingTopic].\n\n**Purpose of Meeting:**\n[MeetingPurpose]\n\n**Proposed Agenda:**\n1. [AgendaItem1]\n2. [AgendaItem2]\n3. [AgendaItem3]\n[Conditional:AdditionalAgenda]\n\n**Duration:** [Duration] minutes\n\n**Suggested Times:** (All times in [TimeZone])\n• [Option1]\n• [Option2]\n• [Option3]\n\nWould any of these times work for your schedule? If not, please let me know your availability, and I'll adjust accordingly.\n\n[Conditional:RemoteMeeting]\n\nI look forward to our discussion.\n\nBest regards,\n[SenderName]\n[SenderTitle]\n[Department]\n[Email] | [Phone]",
+  "variables": ["MeetingTopic", "FirstName", "LastName", "MeetingPurpose", "AgendaItem1", "AgendaItem2", "AgendaItem3", "Duration", "TimeZone", "Option1", "Option2", "Option3", "SenderName", "SenderTitle", "Department", "Email", "Phone"],
+  "conditional_keys": ["AdditionalAgenda", "RemoteMeeting"]
+}
