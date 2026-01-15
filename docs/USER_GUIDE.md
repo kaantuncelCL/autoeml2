@@ -137,57 +137,6 @@ Sarah Johnson
 Director of Partnerships
 ```
 
-#### Sales Follow-Up
-
-```
-Hi [FirstName],
-
-Thank you for taking the time to speak with me last week about [Company]'s
-needs in the enterprise software space.
-
-Based on our conversation, I've put together a customized proposal that
-addresses the specific challenges you mentioned.
-
-Key highlights:
-- 40% reduction in processing time
-- Seamless integration with your existing systems
-- Dedicated support team for [Company]
-
-I'd love to walk you through the details. Are you available for a follow-up
-call this Thursday or Friday?
-
-Best,
-Mike Chen
-Account Executive
-```
-
-#### Event Invitation
-
-```
-Dear [FirstName],
-
-You're invited!
-
-[Company] is cordially invited to our Annual Industry Summit on March 15th.
-
-As [Title] at [Company], we believe you would find our keynote session on
-"Future of Technology" particularly relevant.
-
-Event Details:
-- Date: March 15, 2025
-- Time: 9:00 AM - 4:00 PM
-- Location: Grand Hotel Conference Center
-
-Please RSVP by March 1st.
-
-We hope to see you there!
-
-Best regards,
-Events Team
-```
-
----
-
 ## Using the Application
 
 ### Step-by-Step Walkthrough

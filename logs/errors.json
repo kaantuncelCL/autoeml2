@@ -142,5 +142,165 @@
       "Check the error log for more details",
       "Try restoring from a recent backup"
     ]
+  },
+  {
+    "timestamp": "2026-01-15T16:10:29.073340",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 1 opening, 0 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2026-01-15T16:10:29.793515",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 1 opening, 0 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2026-01-15T16:10:30.035547",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 1 opening, 0 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2026-01-15T16:10:30.268963",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 1 opening, 0 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2026-01-15T16:10:31.017126",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 1 opening, 0 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2026-01-15T16:11:19.140251",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 2 opening, 1 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2026-01-15T16:11:19.322524",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 2 opening, 1 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2026-01-15T16:11:19.648576",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 2 opening, 1 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2026-01-15T16:11:19.873608",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 2 opening, 1 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
+  },
+  {
+    "timestamp": "2026-01-15T16:11:20.169227",
+    "severity": "ERROR",
+    "context": "Extract Variables",
+    "error_type": "ValueError",
+    "error_message": "Template syntax errors: Mismatched brackets: 2 opening, 1 closing",
+    "user_message": "Invalid data format detected. Please check your input data.",
+    "traceback": "",
+    "recovery_suggestions": [
+      "Check the data format",
+      "Ensure numeric fields contain valid numbers",
+      "Verify date formats are correct",
+      "Check the error log for more details",
+      "Try restoring from a recent backup"
+    ]
   }
 ]
